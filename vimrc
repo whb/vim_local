@@ -189,7 +189,7 @@ set showmatch
 set mat=2
 
 "Highlight search things
-set nohlsearch
+set hlsearch
 
   """"""""""""""""""""""""""""""
   " => Statusline
