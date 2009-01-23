@@ -32,19 +32,14 @@
 "   ------ *> File explorer
 "   ------ *> Minibuffer
 "   ------ *> Tag list (ctags) - not used
-"   ------ *> LaTeX Suite things
 "   *> Filetype generic
-"   ------ *> Todo
 "   ------ *> VIM
 "   ------ *> HTML related
 "   ------ *> Ruby & PHP section
-"   ------ *> Cheetah section
 "   ------ *> Vim section
 "   ------ *> Java section
 "   ------ *> JavaScript section
 "   ------ *> C mappings
-"   ------ *> SML
-"   ------ *> Scheme bindings
 "   *> Snippets
 "   ------ *> javaScript
 "   *> Cope
@@ -105,7 +100,6 @@ colorscheme twilight2
 if has("gui_running")
   set guioptions-=T
   set guioptions-=m
-  let psc_style='cool'
 endif
 
 set encoding=utf8
@@ -317,7 +311,7 @@ iab xcabo  //XXX: Cabo
 " => Editing mappings etc.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Remap VIM 0
-map 0 ^
+"map 0 ^
 
 if has("mac")
   nmap <D-j> <M-j>
