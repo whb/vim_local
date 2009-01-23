@@ -1,3 +1,0 @@
-set guifont=Consolas:h10.5:cANSI
-set guifontwide=Î¢ÈíÑÅºÚ:h10.5:cGB2312
-:autocmd GUIEnter * winpos 80 0

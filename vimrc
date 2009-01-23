@@ -12,7 +12,7 @@
 " Sections:
 " ----------------------
 "   *> General
-"   *> Colors and Fonts
+"   *> Colors and GUI options
 "   *> Fileformats
 "   *> VIM userinterface
 "   ------ *> Statusline
@@ -97,33 +97,17 @@ autocmd! bufwritepost vimrc source ~/vim_local/vimrc
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
+" => Colors and GUI options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Enable syntax hl
 syntax enable
 
-"Set font to Monaco 10pt
-if MySys() == "mac"
-  set gfn=Bitstream\ Vera\ Sans\ Mono:h12
-  set shell=/bin/bash
-elseif MySys() == "windows"
-  set gfn=Bitstream\ Vera\ Sans\ Mono:h10
-elseif MySys() == "linux"
-  set guifont=Consolas\ 12
-  set guifontwide=Microsoft\ YaHei\ 11
-  "set shell=/bin/bash
-endif
+colorscheme twilight2
+
 if has("gui_running")
   set guioptions-=T
   set guioptions-=m
-  "set guioptions-=e
-  " set background=dark
   let psc_style='cool'
-  " colorscheme ps_color
-  colorscheme twilight2
-else
-  " colorscheme ps_color
-  colorscheme twilight2
 endif
 
 set encoding=utf8
@@ -337,18 +321,18 @@ iab xcabo  //XXX: Cabo
 "Remap VIM 0
 map 0 ^
 
-"Move a line of text using control
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-if MySys() == "mac"
+if has("mac")
   nmap <D-j> <M-j>
   nmap <D-k> <M-k>
   vmap <D-j> <M-j>
   vmap <D-k> <M-k>
 endif
+
+"Move a line of text using control
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 func! DeleteTrailingWS()
   exe "normal mz"
@@ -368,13 +352,13 @@ endfunc
 
 func! DeleteTillSlash()
   let g:cmd = getcmdline()
-  if MySys() == "linux" || MySys() == "mac"
+  if has("unix") || has("mac")
     let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*", "\\1", "")
   else
     let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\]\\).*", "\\1", "")
   endif
   if g:cmd == g:cmd_edited
-    if MySys() == "linux" || MySys() == "mac"
+    if has("unix") || has("mac")
       let g:cmd_edited = substitute(g:cmd, "\\(.*\[/\]\\).*/", "\\1", "")
     else
       let g:cmd_edited = substitute(g:cmd, "\\(.*\[\\\\\]\\).*\[\\\\\]", "\\1", "")
