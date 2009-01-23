@@ -626,13 +626,6 @@ map <leader>s? z=
    au FileType java call JavaFold()
    au FileType java setl fen
 
-   au BufEnter *.sablecc,*.scc set ft=sablecc
-   au BufEnter *.peep set ft=peephole
-   au Syntax peephole so ~/vim_local/syntax/peephole.vim
-
-   "Eclim
-   let g:EclimPath = "/Applications/eclipse/plugins/org.eclim_1.2.3/bin/eclim"
-
 
    """"""""""""""""""""""""""""""
    " => JavaScript section
