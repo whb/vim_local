@@ -3,11 +3,9 @@
 "      __ | \
 "     /   | /
 "     \__ | \
-" by Amix - http://amix.dk/
+" origin from Amix - http://amix.dk/
 "
-" Maintainer:	Amir Salihefendic <amix3k at gmail.com>
-" Version: 2.8
-" Last Change: 26/10/06 17:44:17
+" Maintainer:	Wu Haibo(haibowu at hotmai.com)
 "
 " Sections:
 " ----------------------
@@ -552,22 +550,6 @@ map <leader>s? z=
    map <F8> :!/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 
-   """"""""""""""""""""""""""""""
-   " => LaTeX Suite things
-   """"""""""""""""""""""""""""""
-   let g:Tex_DefaultTargetFormat="pdf"
-   let g:Tex_ViewRule_pdf='xpdf'
-
-   "Bindings
-   autocmd FileType tex map <silent><leader><space> :w!<cr> :silent! call Tex_RunLaTeX()<cr>
-
-   "Auto complete some things ;)
-   autocmd FileType tex inoremap $i \indent 
-   autocmd FileType tex inoremap $* \cdot 
-   autocmd FileType tex inoremap $i \item 
-   autocmd FileType tex inoremap $m \[<cr>\]<esc>O
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Filetype generic
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -582,12 +564,6 @@ map <leader>s? z=
    autocmd FileType php set omnifunc=phpcomplete#CompletePHP
    autocmd FileType c set omnifunc=ccomplete#Complete
 
-
-   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   " => Todo
-   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-   au BufNewFile,BufRead *.todo so ~/vim_local/syntax/amido.vim
-   au BufNewFile,BufRead *.mako set ft=mako
 
    """"""""""""""""""""""""""""""
    " => VIM
@@ -615,12 +591,6 @@ map <leader>s? z=
    autocmd FileType php compiler php
    autocmd FileType php map <buffer> <leader><space> <leader>cd:w<cr>:make %<cr>
 
-
-   """"""""""""""""""""""""""""""
-   " => Cheetah section
-   """""""""""""""""""""""""""""""
-   autocmd FileType cheetah set ft=xml
-   autocmd FileType cheetah set syntax=cheetah
 
    """""""""""""""""""""""""""""""
    " => Vim section
@@ -699,28 +669,14 @@ map <leader>s? z=
    """"""""""""""""""""""""""""""
    " => HTML
    """""""""""""""""""""""""""""""
-   au FileType html,cheetah set ft=xml
-   au FileType html,cheetah set syntax=html
+   au FileType html set ft=xml
+   au FileType html set syntax=html
 
 
    """"""""""""""""""""""""""""""
    " => C mappings
    """""""""""""""""""""""""""""""
    autocmd FileType c map <buffer> <leader><space> :w<cr>:!gcc %<cr>
-
-
-   """""""""""""""""""""""""""""""
-   " => SML
-   """""""""""""""""""""""""""""""
-   autocmd FileType sml map <silent> <buffer> <leader><space> <leader>cd:w<cr>:!sml %<cr>
-
-
-   """"""""""""""""""""""""""""""
-   " => Scheme bidings
-   """"""""""""""""""""""""""""""
-   autocmd BufNewFile,BufRead *.scm map <buffer> <leader><space> <leader>cd:w<cr>:!petite %<cr>
-   autocmd BufNewFile,BufRead *.scm inoremap <buffer> <C-t> (pretty-print )<esc>i
-   autocmd BufNewFile,BufRead *.scm vnoremap <C-t> <esc>`>a)<esc>`<i(pretty-print <esc>
 
 
 """"""""""""""""""""""""""""""
