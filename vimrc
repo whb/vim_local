@@ -227,8 +227,8 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 " => Moving around and tabs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Map space to / and c-space to ?
-map <space> /
-map <c-space> ?
+map <space> <C-F>
+"map <c-space> ?
 
 "Smart way to move btw. windows
 map <C-j> <C-W>j
