@@ -120,7 +120,7 @@ if has("gui_running")
 endif
 
 "Omni menu colors
-hi Pmenu guibg=#1a293f
+hi Pmenu guibg=#1a595f
 hi PmenuSel guibg=#54657d guifg=#ffffff
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
