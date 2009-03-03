@@ -631,7 +631,6 @@ map <leader>s? z=
    """"""""""""""""""""""""""""""
    " => JavaScript section
    """""""""""""""""""""""""""""""
-   au FileType javascript so ~/vim_local/syntax/javascript.vim
    function! JavaScriptFold() 
      setl foldmethod=syntax
      setl foldlevelstart=1
