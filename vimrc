@@ -120,7 +120,7 @@ if has("gui_running")
 endif
 
 "Omni menu colors
-hi Pmenu guibg=#1a595f
+hi Pmenu guibg=#2a5aaf
 hi PmenuSel guibg=#54657d guifg=#ffffff
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -535,6 +535,15 @@ map <leader>s? z=
    autocmd BufRead,BufNew :call UMiniBufExplorer
    
    map <leader>u :TMiniBufExplorer<cr>:TMiniBufExplorer<cr>
+
+
+   """"""""""""""""""""""""""""""
+   " => Tag list (ctags) - not used
+   """"""""""""""""""""""""""""""
+   map <leader>t :FuzzyFinderTextMate<CR>
+   let g:fuzzy_ceiling=20000
+   let g:fuzzy_matching_limit=25
+   let g:fuzzy_ignore = "gems/*, log/*"
 
 
    """"""""""""""""""""""""""""""
