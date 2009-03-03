@@ -239,6 +239,7 @@ map <C-l> <C-W>l
 "Actually, the tab does not switch buffers, but my arrows
 "Bclose function ca be found in "Buffer related" section
 map <leader>bd :Bclose<cr>
+map <leader>bo :Bonly<cr>
 map <down> <leader>bd
 "Use the arrows to something usefull
 map <right> :bn<cr>
