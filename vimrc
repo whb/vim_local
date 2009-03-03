@@ -186,19 +186,19 @@ set mat=2
 "Highlight search things
 set hlsearch
 
-  """"""""""""""""""""""""""""""
-  " => Statusline
-  """"""""""""""""""""""""""""""
-  "Always hide the statusline
-  set laststatus=2
+""""""""""""""""""""""""""""""
+" => Statusline
+""""""""""""""""""""""""""""""
+"Always hide the statusline
+set laststatus=2
 
-  function! CurDir()
-     let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-     return curdir
-  endfunction
+function! CurDir()
+  let curdir = substitute(getcwd(), 'D:\\home\\admin\\', "~/", "g")
+  return curdir
+endfunction
 
-  "Format the statusline
-  set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+"Format the statusline
+set statusline=\ %f%m%r%h\ %w\ \ CWD:\ %{CurDir()}\ \ \ Line:\ %l/%L:%c
 
 
 """"""""""""""""""""""""""""""
@@ -227,9 +227,8 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around and tabs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Map space to / and c-space to ?
+"Map space to page down
 map <space> <C-F>
-"map <c-space> ?
 
 "Smart way to move btw. windows
 map <C-j> <C-W>j
@@ -240,6 +239,7 @@ map <C-l> <C-W>l
 "Actually, the tab does not switch buffers, but my arrows
 "Bclose function ca be found in "Buffer related" section
 map <leader>bd :Bclose<cr>
+"Depended on BufOnly plugin
 map <leader>bo :Bonly<cr>
 map <down> <leader>bd
 "Use the arrows to something usefull
