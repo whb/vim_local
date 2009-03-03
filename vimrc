@@ -31,6 +31,7 @@
 "   ------ *> Yank ring
 "   ------ *> File explorer
 "   ------ *> Minibuffer
+"   ------ *> Fuzzy finder & textmate
 "   ------ *> Tag list (ctags) - not used
 "   *> Filetype generic
 "   ------ *> VIM
@@ -538,7 +539,7 @@ map <leader>s? z=
 
 
    """"""""""""""""""""""""""""""
-   " => Tag list (ctags) - not used
+   " => Fuzzy finder & textmate
    """"""""""""""""""""""""""""""
    map <leader>t :FuzzyFinderTextMate<CR>
    let g:fuzzy_ceiling=20000
