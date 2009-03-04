@@ -21,9 +21,10 @@ command! -bang -narg=? -complete=file   FuzzyFinderTextMate   call FuzzyFinderTe
 command! FuzzyFinderTextMateRefreshFiles ruby refresh_finder
   
 function! InstantiateTextMateMode() "{{{
+let g:fuzzy_ruby_file = globpath(&rtp, "ruby/fuzzy_file_finder.rb")
 ruby << RUBY
   begin
-    require "#{ENV['HOME']}/vim_local/ruby/fuzzy_file_finder"
+    require VIM.evaluate("g:fuzzy_ruby_file")
   rescue LoadError
     begin
       require 'rubygems'
