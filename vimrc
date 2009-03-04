@@ -83,11 +83,11 @@ nmap <leader>w :w!<cr>
 nmap <leader>f :find<cr>
 
 "Fast reloading of the .vimrc
-map <leader>s :source ~/vim_local/vimrc<cr>
+map <leader>s :execute "source ".globpath(&rtp, 'vimrc')<cr>
 "Fast editing of .vimrc
-map <leader>e :e! ~/vim_local/vimrc<cr>
+map <leader>e :execute "edit ".globpath(&rtp, 'vimrc')<cr>
 "When .vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/vim_local/vimrc
+autocmd! bufwritepost vimrc execute "source ".globpath(&rtp, 'vimrc')
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
