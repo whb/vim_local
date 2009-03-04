@@ -541,10 +541,10 @@ map <leader>s? z=
    """"""""""""""""""""""""""""""
    " => Fuzzy finder & textmate
    """"""""""""""""""""""""""""""
-   map <leader>t :FuzzyFinderTextMate<CR>
+   map <M-t> :FuzzyFinderTextMate<CR>
    let g:fuzzy_ceiling=20000
    let g:fuzzy_matching_limit=25
-   let g:fuzzy_ignore = "gems/*, log/*"
+   let g:fuzzy_ignore = "log/*;tmp/*;vendor/*;*.ico;*.gif;*.jpg;*.png"
 
 
    """"""""""""""""""""""""""""""
