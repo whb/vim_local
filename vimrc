@@ -41,8 +41,6 @@
 "   ------ *> Java section
 "   ------ *> JavaScript section
 "   ------ *> C mappings
-"   *> Snippets
-"   ------ *> javaScript
 "   *> Cope
 "   *> MISC
 "
@@ -673,49 +671,7 @@ map <leader>s? z=
    """"""""""""""""""""""""""""""
    " => C mappings
    """""""""""""""""""""""""""""""
-   autocmd FileType c map <buffer> <leader><space> :w<cr>:!gcc %<cr>
-
-
-""""""""""""""""""""""""""""""
-" => Snippets
-"""""""""""""""""""""""""""""""
-   "You can use <c-j> to goto the next <++> - it is pretty smart ;)
-
-   """""""""""""""""""""""""""""""
-   " => JavaScript
-   """""""""""""""""""""""""""""""
-   autocmd FileType cheetah,html,javascript inorea <buffer> cfun <c-r>=IMAP_PutTextWithMovement("function <++>(<++>) {\n<++>;\nreturn <++>;\n}")<cr>
-   autocmd filetype cheetah,html,javascript inorea <buffer> cfor <c-r>=IMAP_PutTextWithMovement("for(<++>; <++>; <++>) {\n<++>;\n}")<cr>
-   autocmd FileType cheetah,html,javascript inorea <buffer> cif <c-r>=IMAP_PutTextWithMovement("if(<++>) {\n<++>;\n}")<cr>
-   autocmd FileType cheetah,html,javascript inorea <buffer> cifelse <c-r>=IMAP_PutTextWithMovement("if(<++>) {\n<++>;\n}\nelse {\n<++>;\n}")<cr>
-   autocmd FileType cheetah,html,javascript inorea <buffer> cclass <c-r>=IMAP_PutTextWithMovement("<++> = new AJS.Class({\ninit: function(<++>) {\n<++>\n}<++>\n});")<cr>
-
-
-   """""""""""""""""""""""""""""""
-   " => HTML
-   """""""""""""""""""""""""""""""
-   autocmd FileType cheetah,html inorea <buffer> cahref <c-r>=IMAP_PutTextWithMovement('<a href="<++>"><++></a>')<cr>
-   autocmd FileType cheetah,html inorea <buffer> cbold <c-r>=IMAP_PutTextWithMovement('<b><++></b>')<cr>
-   autocmd FileType cheetah,html inorea <buffer> cimg <c-r>=IMAP_PutTextWithMovement('<img src="<++>" alt="<++>" />')<cr>
-   autocmd FileType cheetah,html inorea <buffer> cpara <c-r>=IMAP_PutTextWithMovement('<p><++></p>')<cr>
-   autocmd FileType cheetah,html inorea <buffer> ctag <c-r>=IMAP_PutTextWithMovement('<<++>><++></<++>>')<cr>
-   autocmd FileType cheetah,html inorea <buffer> ctag1 <c-r>=IMAP_PutTextWithMovement("<<++>><cr><++><cr></<++>>")<cr>
-
-
-   """""""""""""""""""""""""""""""
-   " => Java
-   """""""""""""""""""""""""""""""
-   autocmd FileType java inorea <buffer> cfun <c-r>=IMAP_PutTextWithMovement("public<++> <++>(<++>) {\n<++>;\nreturn <++>;\n}")<cr> 
-   autocmd FileType java inorea <buffer> cfunpr <c-r>=IMAP_PutTextWithMovement("private<++> <++>(<++>) {\n<++>;\nreturn <++>;\n}")<cr> 
-   autocmd FileType java inorea <buffer> cfor <c-r>=IMAP_PutTextWithMovement("for(<++>; <++>; <++>) {\n<++>;\n}")<cr> 
-   autocmd FileType java inorea <buffer> cif <c-r>=IMAP_PutTextWithMovement("if(<++>) {\n<++>;\n}")<cr> 
-   autocmd FileType java inorea <buffer> cifelse <c-r>=IMAP_PutTextWithMovement("if(<++>) {\n<++>;\n}\nelse {\n<++>;\n}")<cr>
-   autocmd FileType java inorea <buffer> cclass <c-r>=IMAP_PutTextWithMovement("class <++> <++> {\n<++>\n}")<cr>
-   autocmd FileType java inorea <buffer> cmain <c-r>=IMAP_PutTextWithMovement("public static void main(String[] argv) {\n<++>\n}")<cr>
-   
-
-   "Presse c-q insted of space (or other key) to complete the snippet
-   imap <C-q> <C-]>
+   "autocmd FileType c map <buffer> <leader><space> :w<cr>:!gcc %<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
