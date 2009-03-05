@@ -1,7 +1,7 @@
 set lines=40 columns=110
 
-set runtimepath=~/vim_local,$VIMRUNTIME
-source ~/vim_local/vimrc
+set runtimepath=~/.vim,~/.vim/after,$VIMRUNTIME
+source ~/.vim/vimrc
 
 if has("gui_running")
   :autocmd GUIEnter * winpos 0 0
