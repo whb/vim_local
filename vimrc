@@ -136,8 +136,8 @@ nmap <leader>fu :se ff=unix<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM userinterface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Set 7 lines to the curors - when moving vertical..
-set so=7
+"Set 1 lines to the curors - when moving vertical..
+set so=1
 
 "Turn on WiLd menu
 set wildmenu
@@ -274,7 +274,6 @@ map <leader>cd :cd %:p:h<cr>
 " => Parenthesis/bracket expanding
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
-")
 vnoremap $2 <esc>`>a]<esc>`<i[<esc>
 vnoremap $3 <esc>`>a}<esc>`<i{<esc>
 vnoremap $$ <esc>`>a"<esc>`<i"<esc>
@@ -284,8 +283,8 @@ vnoremap $e <esc>`>a"<esc>`<i"<esc>
 "Map auto complete of (, ", ', [
 inoremap $1 ()<esc>:let leavechar=")"<cr>i
 inoremap $2 []<esc>:let leavechar="]"<cr>i
-inoremap $4 {<esc>o}<esc>:let leavechar="}"<cr>O
 inoremap $3 {}<esc>:let leavechar="}"<cr>i
+inoremap $4 {<esc>o}<esc>:let leavechar="}"<cr>O
 inoremap $q ''<esc>:let leavechar="'"<cr>i
 inoremap $e ""<esc>:let leavechar='"'<cr>i
 au BufNewFile,BufRead *.\(vim\)\@! inoremap " ""<esc>:let leavechar='"'<cr>i
@@ -300,19 +299,13 @@ imap <d-l> <esc>:exec "normal f" . leavechar<cr>a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "My information
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
-iab xname Amir Salihefendic
-iab cancle cancel
-iab Cancle Cancel
-iab xcabo  //XXX: Cabo
+iab xname Haibo Wu
 
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings etc.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Remap VIM 0
-"map 0 ^
-
 if has("mac")
   nmap <D-j> <M-j>
   nmap <D-k> <M-k>
@@ -606,9 +599,9 @@ map <leader>s? z=
    au FileType java inoremap <buffer> <C-t> System.out.println();<esc>hi
 
    "Java comments
-   autocmd FileType java source ~/vim_local/macros/jcommenter.vim
-   autocmd FileType java let b:jcommenter_class_author='Amir Salihefendic (amix@amix.dk)'
-   autocmd FileType java let b:jcommenter_file_author='Amir Salihefendic (amix@amix.dk)'
+   autocmd FileType java execute "source ".globpath(&rtp, 'macros/jcommenter.vim')
+   autocmd FileType java let b:jcommenter_class_author='Haibo Wu (haibowu@hotmail.com)'
+   autocmd FileType java let b:jcommenter_file_author='Haibo Wu (haibowu@hotmail.com)'
    autocmd FileType java map <buffer> <F2> :call JCommentWriter()<cr>
 
    "Abbr'z
@@ -733,19 +726,6 @@ function! DateToUTC()
     %s/getMinute/getUTCMinute/g
     %s/getSecond/getUTCSecond/g
 endfunction
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Rails project
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! Inventory()
-    exe "cd ~/projects/inventory"
-endfunction
-function! PdfToText()
-    exe "cd ~/documents/pdftxt"
-endfunction
-
-map z1 :call  PdfToText()<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

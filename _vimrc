@@ -16,7 +16,7 @@ endif
 " => Inventory
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 function! Inventory()
-    exe "cd e:/learning/inventory"
+  exe "cd e:/learning/inventory"
 endfunction
 
 map <M-r> :call Inventory()<cr>:e README<cr>
