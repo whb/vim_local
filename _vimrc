@@ -1,6 +1,6 @@
 set lines=40 columns=110
 
-set runtimepath=~/.vim,~/.vim/after,$VIMRUNTIME
+set runtimepath=~/.vim,$VIMRUNTIME,~/.vim/after
 source ~/.vim/vimrc
 
 if has("gui_running")
