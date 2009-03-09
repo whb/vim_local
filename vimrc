@@ -387,7 +387,7 @@ endif
 " => Buffer realted
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Fast open a buffer by search for a name
-map <c-q> :q<cr>
+map <silent> <c-q> :q<cr>
 
 "Open a dummy buffer for paste
 map <leader>q :e ~/buffer<cr>
