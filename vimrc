@@ -32,6 +32,7 @@
 "   ------ *> File explorer
 "   ------ *> Minibuffer
 "   ------ *> Fuzzy finder & textmate
+"   ------ *> NERD_commenter
 "   ------ *> Tag list (ctags) - not used
 "   *> Filetype generic
 "   ------ *> VIM
@@ -536,6 +537,12 @@ map <leader>s? z=
    let g:fuzzy_ceiling=20000
    let g:fuzzy_matching_limit=25
    let g:fuzzy_ignore = "log/*;tmp/*;vendor/*;*.ico;*.gif;*.jpg;*.png"
+
+
+   """"""""""""""""""""""""""""""
+   " => NERD_commenter
+   """"""""""""""""""""""""""""""
+   let g:NERDShutUp=1
 
 
    """"""""""""""""""""""""""""""
